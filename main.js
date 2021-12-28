@@ -1,6 +1,7 @@
 /** Connect to Moralis server */
-const serverUrl = "https://ryf4vkekqxme.usemoralis.com:2053/server";
-const appId = "3OxKbJmz6dFO00nIw2sWp28fFvnCFrkpNwj7F0bU";
+const serverUrl = "https://y99iqggoorsy.usemoralis.com:2053/server";
+const appId = "NCZXyPNnKyW2fkHGro3Bkqhma5UrdSzV1HKqq1rn";
+
 Moralis.start({ serverUrl, appId });
 let user = Moralis.User.current();
 
@@ -43,16 +44,18 @@ async function submit() {
 
   let metadataHash = jsonFile.hash();
   console.log(jsonFile.ipfs())
+
   let res = await Moralis.Plugins.rarible.lazyMint({
-    chain: 'rinkeby',
+    chain: 'eth',
     userAddress: user.get('ethAddress'),
     tokenType: 'ERC721',
     tokenUri: 'ipfs://' + metadataHash,
-    royaltiesAmount: 75, // 0.05% royalty. Optional
+    supply: 100,
+    royaltiesAmount: 1000, // 10.0% royalty. Optional
   })
   console.log(res);
   document.querySelector('#success_message').innerHTML =
-    `NFT minted. <a href="https://rinkeby.rarible.com/token/${res.data.result.tokenAddress}:${res.data.result.tokenId}">View NFT`;
+    `NFT minted. <a href="https://rarible.com/token/${res.data.result.tokenAddress}:${res.data.result.tokenId}">View NFT`;
   document.querySelector('#success_message').style.display = "block";
   setTimeout(() => {
     document.querySelector('#success_message').style.display = "none";
