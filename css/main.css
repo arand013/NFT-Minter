@@ -121,6 +121,9 @@ body {
     border-radius: 4px;
     display: none;
 }
+#mint {
+  margin-top: 80px;
+}
   
   /* Media Queries */
   @media screen and (max-width: 1024px) {
