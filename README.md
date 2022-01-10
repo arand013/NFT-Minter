@@ -32,7 +32,7 @@ Visit deployed Application https://arand013.github.io/NFT-Minter/
 ![license](https://img.shields.io/badge/license-MIT-brightgreen)
 
 ## Preview
-<img width="1440" alt="Screen Shot 2022-01-04 at 11 36 23 PM" src="https://user-images.githubusercontent.com/81955843/148178409-82bc1ebc-a861-4cbb-88ad-a9cd96e71b0a.png">
+<img width="1440" alt="Screen Shot 2022-01-10 at 3 01 25 AM" src="https://user-images.githubusercontent.com/81955843/148755458-37232eb2-f295-4d9d-8fec-85ae3eb41733.png">
 
 
 ## Questions
